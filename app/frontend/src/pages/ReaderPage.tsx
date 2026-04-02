@@ -7,6 +7,7 @@ import { SkillTabs } from '../components/assistant/SkillTabs'
 import { EmptyState } from '../components/common/EmptyState'
 import { ErrorBanner } from '../components/common/ErrorBanner'
 import { Loading } from '../components/common/Loading'
+import { ExportMarkdownButton } from '../components/notes/ExportMarkdownButton'
 import { NoteList } from '../components/notes/NoteList'
 import { SaveToNoteButton } from '../components/notes/SaveToNoteButton'
 import { ModelSettingsPanel } from '../components/settings/ModelSettingsPanel'
@@ -48,6 +49,11 @@ export function ReaderPage({ side }: { side: 'left' | 'right' }) {
       {loading ? <Loading /> : null}
       <div style={{ flex: 1, minHeight: 0 }}>
         <OutputPanel />
+      </div>
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        <RunSkillButton />
+        <SaveToNoteButton />
+        <ExportMarkdownButton />
       </div>
       <RunSkillButton />
       <SaveToNoteButton />

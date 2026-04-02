@@ -1,4 +1,3 @@
-
 # PaperClarity V2
 
 ## 当前进度（截至 2026-04-02）
@@ -6,6 +5,12 @@
 ### ✅ 已完成
 - 后端 FastAPI MVP 主链路：文档加载、PDF 解析、上下文构建、Skill 执行、笔记保存、Markdown 导出。
 - Skills 可插拔框架与 6 个内置技能。
+- 前端 React+TypeScript+Vite 基础骨架：
+  - 主布局（左阅读区/右AI工作台）
+  - 文档路径加载入口（调用 `/api/documents/load`）
+  - 技能执行、笔记保存、Markdown 导出按钮
+  - Zustand 状态管理与 API 封装
+
 - 前端 React+TypeScript+Vite 基础骨架：主布局（左阅读区/右AI工作台）、状态管理、API 封装、技能运行与笔记保存入口。
 
 ### 🚧 进行中
@@ -45,7 +50,6 @@ pip install -e .[dev]
 cd ../..
 ./scripts/dev_backend.sh
 ```
-
 
 ### 前端
 ```bash
