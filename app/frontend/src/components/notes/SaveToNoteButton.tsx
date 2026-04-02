@@ -24,6 +24,18 @@ export function SaveToNoteButton() {
     } catch (error) {
       setError(error instanceof Error ? error.message : '保存笔记失败')
     }
+
+  const save = async () => {
+    if (!documentId || !output) return
+    await noteApi.create({
+      document_id: documentId,
+      title: output.title,
+      content: output.raw_text || output.summary,
+      citations: output.citations || []
+    })
+    const notes = (await noteApi.list(documentId)) as any[]
+    setNotes(notes as any)
+
   }
 
   return (

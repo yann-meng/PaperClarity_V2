@@ -55,6 +55,8 @@ export function ReaderPage({ side }: { side: 'left' | 'right' }) {
         <SaveToNoteButton />
         <ExportMarkdownButton />
       </div>
+      <RunSkillButton />
+      <SaveToNoteButton />
       <ModelSettingsPanel />
       <NoteList />
       <PromptPreview />

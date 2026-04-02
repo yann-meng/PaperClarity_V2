@@ -1,5 +1,6 @@
 import { apiRequest } from './api'
 
+
 export type NoteDTO = {
   id: number
   title: string
@@ -12,5 +13,11 @@ export const noteApi = {
   },
   list(documentId: string) {
     return apiRequest<NoteDTO[]>(`/notes/${documentId}`)
+export const noteApi = {
+  create(payload: { document_id: string; title: string; content: string; citations: unknown[] }) {
+    return apiRequest('/notes', { method: 'POST', body: JSON.stringify(payload) })
+  },
+  list(documentId: string) {
+    return apiRequest(`/notes/${documentId}`)
   }
 }

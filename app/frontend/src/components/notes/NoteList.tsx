@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { noteApi } from '../../services/noteApi'
 import { useDocumentStore } from '../../stores/documentStore'
+
 import { useNoteStore } from '../../stores/noteStore'
 
 export function NoteList() {
