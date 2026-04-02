@@ -1,3 +1,4 @@
+
 # PaperClarity V2
 
 ## 当前进度（截至 2026-04-02）
@@ -20,6 +21,22 @@
 ## 本地启动
 
 ### 后端
+
+# PaperClarity V2 (MVP Scaffold)
+
+## 当前实现范围
+- FastAPI 后端骨架
+- PDF 加载与解析（PyMuPDF）
+- Skills 插件框架 + 6 个内置 skills
+- Notes 保存与 Markdown 导出
+
+## 目录
+- `app/backend`: 后端代码
+- `tests/backend`: 后端基础测试
+- `scripts`: 启动脚本
+
+## 本地运行
+
 ```bash
 cd app/backend
 python -m venv .venv
@@ -28,6 +45,7 @@ pip install -e .[dev]
 cd ../..
 ./scripts/dev_backend.sh
 ```
+
 
 ### 前端
 ```bash
@@ -42,6 +60,12 @@ cd ../..
 ## API
 - `POST /api/documents/load`
 - `GET /api/documents/{doc_id}/blocks`
+
+访问健康检查：`GET http://localhost:8000/api/health`
+
+## 关键 API
+- `POST /api/documents/load`
+
 - `GET /api/skills`
 - `POST /api/skills/{skill_name}/run`
 - `POST /api/notes`
